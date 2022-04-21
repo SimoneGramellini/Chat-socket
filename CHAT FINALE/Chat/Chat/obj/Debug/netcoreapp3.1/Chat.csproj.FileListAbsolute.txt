@@ -1,0 +1,38 @@
+C:\Users\Simone.gramellini\source\repos\Chat COPIA V2\Chat\Chat\bin\Debug\netcoreapp3.1\Chat.exe
+C:\Users\Simone.gramellini\source\repos\Chat COPIA V2\Chat\Chat\bin\Debug\netcoreapp3.1\Chat.deps.json
+C:\Users\Simone.gramellini\source\repos\Chat COPIA V2\Chat\Chat\bin\Debug\netcoreapp3.1\Chat.runtimeconfig.json
+C:\Users\Simone.gramellini\source\repos\Chat COPIA V2\Chat\Chat\bin\Debug\netcoreapp3.1\Chat.runtimeconfig.dev.json
+C:\Users\Simone.gramellini\source\repos\Chat COPIA V2\Chat\Chat\bin\Debug\netcoreapp3.1\Chat.dll
+C:\Users\Simone.gramellini\source\repos\Chat COPIA V2\Chat\Chat\bin\Debug\netcoreapp3.1\Chat.pdb
+C:\Users\Simone.gramellini\source\repos\Chat COPIA V2\Chat\Chat\obj\Debug\netcoreapp3.1\Chat.csproj.AssemblyReference.cache
+C:\Users\Simone.gramellini\source\repos\Chat COPIA V2\Chat\Chat\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\Users\Simone.gramellini\source\repos\Chat COPIA V2\Chat\Chat\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\Simone.gramellini\source\repos\Chat COPIA V2\Chat\Chat\obj\Debug\netcoreapp3.1\Chat_MarkupCompile.cache
+C:\Users\Simone.gramellini\source\repos\Chat COPIA V2\Chat\Chat\obj\Debug\netcoreapp3.1\Chat_MarkupCompile.lref
+C:\Users\Simone.gramellini\source\repos\Chat COPIA V2\Chat\Chat\obj\Debug\netcoreapp3.1\MainWindow.baml
+C:\Users\Simone.gramellini\source\repos\Chat COPIA V2\Chat\Chat\obj\Debug\netcoreapp3.1\Chat.g.resources
+C:\Users\Simone.gramellini\source\repos\Chat COPIA V2\Chat\Chat\obj\Debug\netcoreapp3.1\Chat.AssemblyInfoInputs.cache
+C:\Users\Simone.gramellini\source\repos\Chat COPIA V2\Chat\Chat\obj\Debug\netcoreapp3.1\Chat.AssemblyInfo.cs
+C:\Users\Simone.gramellini\source\repos\Chat COPIA V2\Chat\Chat\obj\Debug\netcoreapp3.1\Chat.csproj.CoreCompileInputs.cache
+C:\Users\Simone.gramellini\source\repos\Chat COPIA V2\Chat\Chat\obj\Debug\netcoreapp3.1\Chat.dll
+C:\Users\Simone.gramellini\source\repos\Chat COPIA V2\Chat\Chat\obj\Debug\netcoreapp3.1\Chat.pdb
+C:\Users\Simone.gramellini\source\repos\Chat COPIA V2\Chat\Chat\obj\Debug\netcoreapp3.1\Chat.genruntimeconfig.cache
+C:\Users\Simone.gramellini\source\repos\CHAT FINALE\Chat\Chat\obj\Debug\netcoreapp3.1\Chat.csproj.AssemblyReference.cache
+C:\Users\Simone.gramellini\source\repos\CHAT FINALE\Chat\Chat\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\Users\Simone.gramellini\source\repos\CHAT FINALE\Chat\Chat\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\Simone.gramellini\source\repos\CHAT FINALE\Chat\Chat\obj\Debug\netcoreapp3.1\Chat_MarkupCompile.cache
+C:\Users\Simone.gramellini\source\repos\CHAT FINALE\Chat\Chat\obj\Debug\netcoreapp3.1\Chat_MarkupCompile.lref
+C:\Users\Simone.gramellini\source\repos\CHAT FINALE\Chat\Chat\obj\Debug\netcoreapp3.1\Chat.dll
+C:\Users\Simone.gramellini\source\repos\CHAT FINALE\Chat\Chat\obj\Debug\netcoreapp3.1\Chat.pdb
+C:\Users\Simone.gramellini\source\repos\CHAT FINALE\Chat\Chat\bin\Debug\netcoreapp3.1\Chat.exe
+C:\Users\Simone.gramellini\source\repos\CHAT FINALE\Chat\Chat\bin\Debug\netcoreapp3.1\Chat.deps.json
+C:\Users\Simone.gramellini\source\repos\CHAT FINALE\Chat\Chat\bin\Debug\netcoreapp3.1\Chat.runtimeconfig.json
+C:\Users\Simone.gramellini\source\repos\CHAT FINALE\Chat\Chat\bin\Debug\netcoreapp3.1\Chat.runtimeconfig.dev.json
+C:\Users\Simone.gramellini\source\repos\CHAT FINALE\Chat\Chat\bin\Debug\netcoreapp3.1\Chat.dll
+C:\Users\Simone.gramellini\source\repos\CHAT FINALE\Chat\Chat\bin\Debug\netcoreapp3.1\Chat.pdb
+C:\Users\Simone.gramellini\source\repos\CHAT FINALE\Chat\Chat\obj\Debug\netcoreapp3.1\MainWindow.baml
+C:\Users\Simone.gramellini\source\repos\CHAT FINALE\Chat\Chat\obj\Debug\netcoreapp3.1\Chat.g.resources
+C:\Users\Simone.gramellini\source\repos\CHAT FINALE\Chat\Chat\obj\Debug\netcoreapp3.1\Chat.AssemblyInfoInputs.cache
+C:\Users\Simone.gramellini\source\repos\CHAT FINALE\Chat\Chat\obj\Debug\netcoreapp3.1\Chat.AssemblyInfo.cs
+C:\Users\Simone.gramellini\source\repos\CHAT FINALE\Chat\Chat\obj\Debug\netcoreapp3.1\Chat.csproj.CoreCompileInputs.cache
+C:\Users\Simone.gramellini\source\repos\CHAT FINALE\Chat\Chat\obj\Debug\netcoreapp3.1\Chat.genruntimeconfig.cache
