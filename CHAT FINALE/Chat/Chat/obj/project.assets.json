@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\simon\\Downloads\\Chat-socket-main\\CHAT FINALE\\Chat\\Chat\\Chat.csproj",
+      "projectUniqueName": "C:\\Users\\simon\\Documents\\GitHub\\Chat-socket\\CHAT FINALE\\Chat\\Chat\\Chat.csproj",
       "projectName": "Chat",
-      "projectPath": "C:\\Users\\simon\\Downloads\\Chat-socket-main\\CHAT FINALE\\Chat\\Chat\\Chat.csproj",
+      "projectPath": "C:\\Users\\simon\\Documents\\GitHub\\Chat-socket\\CHAT FINALE\\Chat\\Chat\\Chat.csproj",
       "packagesPath": "C:\\Users\\simon\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\simon\\Downloads\\Chat-socket-main\\CHAT FINALE\\Chat\\Chat\\obj\\",
+      "outputPath": "C:\\Users\\simon\\Documents\\GitHub\\Chat-socket\\CHAT FINALE\\Chat\\Chat\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\simon\\AppData\\Roaming\\NuGet\\NuGet.Config",
