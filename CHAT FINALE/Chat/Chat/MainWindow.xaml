@@ -5,18 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Chat"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Background="#FFEBFFE2">
     <Grid>
-        <TextBox x:Name="txtMessaggio" HorizontalAlignment="Left" Margin="536,246,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtPorta" HorizontalAlignment="Left" Margin="536,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtIP" HorizontalAlignment="Left" Margin="536,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnInvia" Content="Conferma" HorizontalAlignment="Left" Margin="536,325,0,0" VerticalAlignment="Top" Width="120" Height="38" Click="btnInvia_Click"/>
-        <ListBox x:Name="lstMessaggi" HorizontalAlignment="Left" Width="262" Margin="138,71,0,71"/>
-        <TextBlock HorizontalAlignment="Left" Margin="536,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="139"><Run Language="it-it" Text="Inserire indirizzo ip"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="536,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="139"><Run Language="it-it" Text="Inserire Porta"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="536,225,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="139"><Run Language="it-it" Text="Inserire messaggio"/></TextBlock>
-        <Label x:Name="lblPortaAscolto" Content="" HorizontalAlignment="Left" Margin="688,120,0,0" VerticalAlignment="Top" Width="64"/>
-        <TextBlock HorizontalAlignment="Left" Margin="688,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" RenderTransformOrigin="0.5,0.5">
+        <TextBox x:Name="txtIP" HorizontalAlignment="Left" Margin="628,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="txtIP_TextChanged"/>
+        <TextBox x:Name="txtPorta" HorizontalAlignment="Left" Margin="628,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="txtPorta_TextChanged"/>
+        <TextBox x:Name="txtMessaggio" HorizontalAlignment="Left" Margin="628,241,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="66" TextChanged="txtMessaggio_TextChanged"/>
+        <Button x:Name="btnInvia" Content="Conferma" HorizontalAlignment="Left" Margin="628,337,0,0" VerticalAlignment="Top" Width="120" Height="57" Click="btnInvia_Click" Background="#FF7AD949" FontSize="20"/>
+        <ListBox x:Name="lstMessaggi" HorizontalAlignment="Left" Width="510" Margin="43,65,0,32"/>
+        <TextBlock HorizontalAlignment="Left" Margin="628,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="139"><Run Language="it-it" Text="Inserire indirizzo ip"/></TextBlock>
+        <TextBlock Margin="628,121,33,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="it-it" Text="Inserire Porta"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="628,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="139"><Run Language="it-it" Text="Inserire messaggio"/></TextBlock>
+        <Label x:Name="lblPortaAscolto" Content="" HorizontalAlignment="Left" Margin="200,34,0,0" VerticalAlignment="Top" Width="107" Background="#FFD4EBFF"/>
+        <TextBlock HorizontalAlignment="Left" Margin="48,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147" RenderTransformOrigin="0.5,0.5" FontSize="20">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

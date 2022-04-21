@@ -57,14 +57,22 @@ namespace Chat
 
         private void btnInvia_Click(object sender, RoutedEventArgs e) //dobbiamo creare l'endpoint del destinatario, e mandargli i mex
         {
-            IPAddress remote_address = IPAddress.Parse(txtIP.Text); //prendo l'ip che ho inserito nel textbox, e lo converto in un ip che sarà quello del destinatario (NON SONO SICURO CHE SIA IL DESTINATARIO)
+            try
+            {
+                IPAddress remote_address = IPAddress.Parse(txtIP.Text); //prendo l'ip che ho inserito nel textbox, e lo converto in un ip che sarà quello del destinatario (NON SONO SICURO CHE SIA IL DESTINATARIO)
 
-            IPEndPoint remote_endpoint = new IPEndPoint(remote_address.MapToIPv4(), int.Parse(txtPorta.Text)); //è l'endpoint del destinatario
+                IPEndPoint remote_endpoint = new IPEndPoint(remote_address.MapToIPv4(), int.Parse(txtPorta.Text)); //è l'endpoint del destinatario
 
-            //a questo punto devo inviare il messaggio
-            byte[] messaggio = Encoding.UTF8.GetBytes(txtMessaggio.Text); //creo un vettore di byte e lo codifico in UTF8 partendo dal mex che ho sull'interfaccia
+                //a questo punto devo inviare il messaggio
+                byte[] messaggio = Encoding.UTF8.GetBytes(txtMessaggio.Text); //creo un vettore di byte e lo codifico in UTF8 partendo dal mex che ho sull'interfaccia
 
-            socket.SendTo(messaggio, remote_endpoint); //inviamo il messaggio al destinatario
+                socket.SendTo(messaggio, remote_endpoint); //inviamo il messaggio al destinatario
+                txtMessaggio.Clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         //un thread ascolterebbe in maniera costante, mentre noi in questa versione faremo si che tramite il dispatcher timer ci permetterà di ascoltare ad intervalli di tempo predefiniti
@@ -96,6 +104,32 @@ namespace Chat
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void txtMessaggio_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            AttivaBottoneControlloTextBoxs();
+        }
+        public void AttivaBottoneControlloTextBoxs()
+        {
+            if (!string.IsNullOrEmpty(txtMessaggio.Text) && !string.IsNullOrEmpty(txtPorta.Text) && !string.IsNullOrEmpty(txtIP.Text)) //se i testi non sono vuoti, attiva il btn
+            {
+                btnInvia.IsEnabled = true;
+            }
+            else
+            {
+                btnInvia.IsEnabled = false;
+            }
+        }
+
+        private void txtPorta_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            AttivaBottoneControlloTextBoxs();
+        }
+
+        private void txtIP_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            AttivaBottoneControlloTextBoxs();
         }
     }
 }
