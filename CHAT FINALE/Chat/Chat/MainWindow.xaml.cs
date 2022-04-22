@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using System.Net.Sockets;
 using System.Net;
 using System.Windows.Threading;
+using System.Threading;
 
 namespace Chat
 {
@@ -25,7 +26,8 @@ namespace Chat
     {
         Socket socket = null;
 
-        DispatcherTimer dTimer = null; //creiamo il nostro dispatcher timer
+        //DispatcherTimer dTimer = null; //creiamo il nostro dispatcher timer
+        Thread thread = null; //creo il thread
 
         int PortaAscolto = 0;
         public MainWindow()
@@ -41,16 +43,22 @@ namespace Chat
             socket.Bind(local_endpoint); //bind associa un socket all'end point. una volta fatto il bind posso stare in ascolto su quel socket per ricevere e trasmettere
 
 
-            //parte per ascoltare i messaggi che ricevo
-
+            //parte per ascoltare i messaggi che ricevo (UTILIZZANDO DISPATCHERTIMER, commentato perchè utiizzo i thread)
+            /*
             dTimer = new DispatcherTimer(); //creo l'oggetto
 
             dTimer.Tick += new EventHandler(aggiornamento_dTimer); //aggiungo l'evento da eseguire ogni volta che scatta l'evento del timer (quindi ad ogni stop del timer io svolgo l'evento). Ciò che abbiamo tra parentesi è il nome del metodo che richiamiamo ad ogni stop del timer
             dTimer.Interval = new TimeSpan(0, 0, 0, 0, 250); //intervallo di tempo che stabiliamo tra un evento e quello successivo. in questo caso sono 250 millisecondi.
             dTimer.Start(); //avvio il timer
+            */
+
+            //creo il thread e gli passo tra parentesi il metodo da eseguire
+            thread = new Thread(new ThreadStart(RicezioneDati));
+            //faccio partire il thread
+            thread.Start();
 
 
-
+            //scrivo su interfaccia la porta su cui sto ascoltaldo in ricezione dei messaggi
             lblPortaAscolto.Content = PortaAscolto;
 
         }
@@ -98,6 +106,42 @@ namespace Chat
 
                     //trascrizione su listbox del from 
                     lstMessaggi.Items.Add(from + ": " + messaggio);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void RicezioneDati()
+        {
+            try
+            {
+                while (true)
+                {
+                    int nBytes = 0; //conto i bytes ricevuti, e mi serve per capire se almeno ho 1 byte da leggere, senno non faccio nulla (ottimizzazione)
+
+                    if ((nBytes = socket.Available) > 0) //controllo se il messaggio è vuoto o no
+                    {
+                        //ricezione dei caratteri in attesa
+                        byte[] buffer = new byte[nBytes]; //creo il vettore di bytes
+
+                        //definisco il remote end point
+                        EndPoint remoteEndPoint = new IPEndPoint(IPAddress.Any, 0); //gli do dei valori di default
+
+                        nBytes = socket.ReceiveFrom(buffer, ref remoteEndPoint); //ci permette di recuperare sia il messaggio, ma pure l'ip (dal pacchetto che è arrivato). quindi gli passo il buffer da cui arriva il messaggio, ed il riferimento all'ip di
+
+                        string from = ((IPEndPoint)remoteEndPoint).Address.ToString(); //recupero l'indirizzo ip, e lo trasformo in stringa.
+                        string messaggio = Encoding.UTF8.GetString(buffer, 0, nBytes);//faccio l'encoding in utf8 del messaggio che ho ricevuto. l'indice è da dove inizi a salvare, mettendo a 0 ovviamente parto dall'inizio
+
+                        this.Dispatcher.BeginInvoke(new Action(() =>
+                        {
+                            //trascrizione su listbox del from 
+                            lstMessaggi.Items.Add(from + ": " + messaggio);
+                        }));
+                    }
+                    Thread.Sleep(5); //
                 }
             }
             catch (Exception ex)

@@ -14,9 +14,9 @@
         <ListBox x:Name="lstMessaggi" HorizontalAlignment="Left" Width="510" Margin="43,65,0,32"/>
         <TextBlock HorizontalAlignment="Left" Margin="628,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="139"><Run Language="it-it" Text="Inserire indirizzo ip"/></TextBlock>
         <TextBlock Margin="628,121,33,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="it-it" Text="Inserire Porta"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="628,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="139"><Run Language="it-it" Text="Inserire messaggio"/></TextBlock>
-        <Label x:Name="lblPortaAscolto" Content="" HorizontalAlignment="Left" Margin="200,34,0,0" VerticalAlignment="Top" Width="107" Background="#FFD4EBFF"/>
-        <TextBlock HorizontalAlignment="Left" Margin="48,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147" RenderTransformOrigin="0.5,0.5" FontSize="20">
+        <TextBlock Margin="628,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Left" Width="139"><Run Language="it-it" Text="Inserire messaggio"/></TextBlock>
+        <Label x:Name="lblPortaAscolto" Content="" HorizontalAlignment="Left" Margin="438,34,0,0" VerticalAlignment="Top" Width="107" Background="#FFD4EBFF"/>
+        <TextBlock HorizontalAlignment="Left" Margin="286,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147" RenderTransformOrigin="0.5,0.5" FontSize="20">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -25,6 +25,15 @@
                     <TranslateTransform/>
                 </TransformGroup>
             </TextBlock.RenderTransform><Run Language="it-it" Text="Porta di ascolto:"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="43,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147" RenderTransformOrigin="0.5,0.5" FontSize="20">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform><Run Language="it-it" Text="KeChat:"/></TextBlock>
 
     </Grid>
 </Window>
