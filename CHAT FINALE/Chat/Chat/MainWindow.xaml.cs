@@ -135,7 +135,7 @@ namespace Chat
                         string from = ((IPEndPoint)remoteEndPoint).Address.ToString(); //recupero l'indirizzo ip, e lo trasformo in stringa.
                         string messaggio = Encoding.UTF8.GetString(buffer, 0, nBytes);//faccio l'encoding in utf8 del messaggio che ho ricevuto. l'indice è da dove inizi a salvare, mettendo a 0 ovviamente parto dall'inizio
 
-                        this.Dispatcher.BeginInvoke(new Action(() =>
+                        this.Dispatcher.BeginInvoke(new Action(() => //metodo standard per il dispatcher
                         {
                             //trascrizione su listbox del from 
                             lstMessaggi.Items.Add(from + ": " + messaggio);
@@ -174,6 +174,11 @@ namespace Chat
         private void txtIP_TextChanged(object sender, TextChangedEventArgs e)
         {
             AttivaBottoneControlloTextBoxs();
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            thread.Abort(); //risolvo bug per cui il thread continuava a ciclare il while true nonostante si chiudesse l'applicativo (da controllare perchè non funziona nella macchina virtuale)
         }
     }
 }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Chat"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Background="#FFEBFFE2">
+        Title="MainWindow" Height="450" Width="800" Background="#FFEBFFE2" Closing="Window_Closing">
     <Grid>
         <TextBox x:Name="txtIP" HorizontalAlignment="Left" Margin="628,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="txtIP_TextChanged"/>
         <TextBox x:Name="txtPorta" HorizontalAlignment="Left" Margin="628,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="txtPorta_TextChanged"/>
